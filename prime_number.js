@@ -15,11 +15,10 @@ function primeNum(num){
     console.log(`${num} is not a prime number`);
     }
 }
-//primeNum(1);
-//primeNum(2);
-//primeNum(3);
-//primeNum(55);
-primeNum(33);
-//primeNum(Math.random());
-//console.log(Math.random() 200);
+primeNum(1);
+primeNum(2);
+primeNum(3);
+primeNum(9);
+primeNum(17);
+primeNum(Math.floor(Math.random() *100));
 

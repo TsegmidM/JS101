@@ -125,5 +125,5 @@ function firstFunction(num1){
 }
 return secondFunction;
 }
-firstFunction(10)(21)(3);
+firstFunction(5)(8)(3);
 console.log(result);
