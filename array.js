@@ -9,7 +9,7 @@ console.log(students[students.length - 1]);
 //console.log(students[0].length);
 console.log(students.indexOf("B"));
 */
-
+/*
 const randomArray = ["A", 20, "B", 23, "C"];
 
 console.log(randomArray);
@@ -24,4 +24,12 @@ randomArray.push(true);
 console.log(randomArray);
 
 randomArray[3] = "U";
-console.log(randomArray);   
+console.log(randomArray);   */
+
+let i = 3;
+let power = 64;
+while(i > 0) {
+    power **= 1/i;
+    console.log(power);
+    i--;
+}
