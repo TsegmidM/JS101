@@ -16,5 +16,6 @@ function fibSequence(num){
     }
 }
 fibSequence(5);
-fibSequence(12);
+console.log(result);
+fibSequence(8);
 console.log(result);
