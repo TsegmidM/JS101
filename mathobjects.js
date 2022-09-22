@@ -36,18 +36,54 @@ nearestdivFive(14);
 nearestdivFive(27.5);
 */
 
-const greatestCommonDivisor = (num1,num2) => {
-    let num3 = 0;
-    if(num1 > num2)
-    num3 = num2;
-    else
-    num3 = num1;
-    while(num3 > 0){
-        if(num1 % num3 == 0 && num2 % num3 == 0){
-            return num3;
-        }
-        num3--;       
+/*const greatestCommonDivisor = (num1,num2) => {
+    if(typeof num1 !== 'number' || typeof num2 !== 'number' || num1 < 0 || num2 < 0){
+        num1 = Math.abs(parseInt(num1));
+        num2 = Math.abs(parseInt(num2));
     }
-    console.log(num3);
+    let rmdr;
+    while( num2 > 0){
+        rmdr = num1 % num2; 
+        num1 = num2;
+        num2 = rmdr;
+    }
+    console.log(num1);
 }
-greatestCommonDivisor(15,12);
+greatestCommonDivisor(-15,12);
+greatestCommonDivisor(20,"19");
+greatestCommonDivisor(15,20);
+//greatestCommonDivisor(555,888);
+*/
+
+/*const gcd = (n1,n2) => {
+    if(n1 == 0)
+    return n2;
+    return gcd(n2 % n1, n1);
+}
+
+const findGCD = (arr) => {
+    let result = arr[0];
+    for(let i = 1; i < n; i++){
+        result = gcd(arr[i], result);
+        if(result == 1)
+        {
+            return 1;
+        }
+    }
+    return result;   
+}
+let arr = [10,20,5,20];
+let n = arr.length;
+console.log(findGCD([10,20,5,10],n));
+console.log(findGCD([6,2,4,8],n));
+*/
+const gcd = (n1,n2) => {
+    if(n1 == 0)
+    return n2;
+    return gcd(n2 % n1, n1);
+}
+const lcm = (a,b) => {
+    console.log( (a * b) / gcd(a,b));
+}
+lcm(20,30);
+lcm(6,4);
