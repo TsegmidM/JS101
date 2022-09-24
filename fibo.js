@@ -1,21 +1,10 @@
-let result = 0;
-
 function fibSequence(num){
-   if(num <= 0){
-    return console.log("Incorrect num");
-   }
-   else if( num == 1){
+   if(num == 0)
    return 0;
-   }
-   else if (num === 2){
+   else if( num <= 3)
    return 1;
-   }
-   else{
-    result = fibSequence(num-1) + fibSequence(num-2);
-    return result;
-    }
+   return fibSequence(num-1) + fibSequence(num-2);
 }
-fibSequence(5);
-console.log(result);
-fibSequence(8);
-console.log(result);
+console.log(fibSequence(0));
+console.log(fibSequence(5));
+console.log(fibSequence(8));
