@@ -77,7 +77,7 @@ let n = arr.length;
 console.log(findGCD([10,20,5,10],n));
 console.log(findGCD([6,2,4,8],n));
 */
-const gcd = (n1,n2) => {
+/*const gcd = (n1,n2) => {
     if(n1 == 0)
     return n2;
     return gcd(n2 % n1, n1);
@@ -87,3 +87,4 @@ const lcm = (a,b) => {
 }
 lcm(20,30);
 lcm(6,4);
+/*
