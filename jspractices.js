@@ -69,22 +69,7 @@ console.log(xoCOunter("oxOxXoXo"));
 console.log(sumofPos([1,2,3.1,4,5]));
 console.log(sumofPos([-2,3.2,4,1,-5,-2,83]));
 */
-/*const func = (n) => {
-    let m;
-    for(let i=1; i<n; i++){
-    for(let m=1; m<n; m++){
-        if(m % 3 === 0){     
-        m = "Gurvaa";
-    }
-     else if(m % 5 === 0){
-     m = "Tavka";
-    }
-}
-     console.log(i);
-    }
-}
-func(15);
-*/
+
 /*
 const reversedStr = (str) => {
     let str2 = [];
@@ -95,14 +80,3 @@ const reversedStr = (str) => {
 }
 reversedStr("Hello");
 */
-const convertToRoman = (n) => {
-    let converted;
-    if( 10 < n < 40){
-        let m = n % 10;
-        let a = Math.floor(n / 10);
-        for(let i=0;i<a;i++)
-
-    }
-
-}
-convertToRoman(22);
