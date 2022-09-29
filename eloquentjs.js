@@ -29,7 +29,7 @@ for(let n = 1; n <= 100; n++){
 */
 
 //chessboard
-const chessBoard = (size) => {
+/*const chessBoard = (size) => {
     let board = "";
     for(let i = 0; i < size; i++){
        for(let n = 0; n < size; n++){
@@ -45,3 +45,43 @@ const chessBoard = (size) => {
     console.log(board);
 }
 chessBoard(8);
+*/
+//Finding minimun number using Math.min
+/*const min = (a,b) => {
+    return Math.min(a,b);
+}
+console.log(min(0,10));
+console.log(min(0,-10));
+*/
+// Finding number if it is even using recursion!!!!
+/*
+const isEven = (n) => {
+    if(n === 0) return true;
+    else if(n === 1) return false;
+    else if(n < 0) return isEven(-n);
+    else return isEven(n-2);
+}
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
+*/
+
+//Bean counting (write a function called countChar that behaves like countBs,
+// except it takes a second argument that indicates the character that is to be counted 
+//(rather than counting only uppercase “B” characters).
+// Rewrite countBs to make use of this new function.)
+/*
+const countChar = (str, char) => {
+    count = 0;
+    for(let i= 0; i < str.length; i++){
+        if(str[i] === char)
+        count++;
+    }
+    return count;
+}
+const countBs = (str) => {
+    return countChar(str, "B");
+}
+console.log(countBs("BBC"));
+console.log(countChar("kakkerlak", "k"));\
+*/
