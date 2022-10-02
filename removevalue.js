@@ -3,7 +3,7 @@
 const array = [29,null,'test','value',"", NaN, 75, undefined, false];
 const removeValue = (value) => {
       const filtered = array.filter((item) => item !== 0 && item !== undefined
-      && item !== null && item !== "" && item !== false && item !== NaN);
+      && item !== null && item !== "" && item !== false && !Number.isNaN(item) );
         return filtered;
     }
 console.log(removeValue());
@@ -30,4 +30,3 @@ const removingValue = (item) => {
     }
 }
 console.log(removingValue("test"));
-
