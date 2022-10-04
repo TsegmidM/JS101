@@ -85,3 +85,99 @@ const countBs = (str) => {
 console.log(countBs("BBC"));
 console.log(countChar("kakkerlak", "k"));\
 */
+//Rest parameter: useful for a function to accept any number of arguments
+/*function max(...numbers) {
+    let result = -Infinity;
+    for (let number of numbers) {
+      if (number > result) result = number;
+    }
+    return result;
+  }
+  console.log(max(4, 1, 9, -2));
+  */
+/*function randomPointOnCircle(radius) {
+    let angle = Math.random() * 2 * Math.PI;
+    return {x: radius * Math.cos(angle),
+            y: radius * Math.sin(angle)};
+}
+console.log(randomPointOnCircle(2));
+*/
+//The sum of range
+//2 argument avaad startaas endruu toog array bolgoj return hgd sum functionoor niilberiig n olood return hiine
+//step oruulj ireed stepiin toogoor deesh doosh hevlene.
+/*
+const range = (start,end,step = start < end ? 1 : -1) => {
+    numArr = [];
+    if( step > 0){
+        for(let i = start; i <= end; i += step) numArr.push(i);
+    } else {
+        for(let i = start; i >=end; i += step) numArr.push(i);
+    }
+    return numArr;
+}
+const sum = (numArr)=> {
+  //  num = numArr;
+    result = 0;
+    for(let element of numArr){
+        result += element;
+    }
+    return result;
+}
+console.log(range(1,10));
+console.log((range(5,2,-1)));
+console.log((range(1,10,2)));
+console.log(sum(range(1,10)));
+*/
+
+//EXC: REVERSING ARRAY
+/*
+const reverseArray = (array) => {
+    return array.reverse();
+}
+const reverseArrayInPlace = (array) => {
+    for(let i=array.lenth-1; i >= 0; i--){
+        array.push(i);
+    }
+    return array;
+}
+console.log(reverseArray(["A", "B", "C"]));
+let arrayValue = [1,2,3,4,5];
+reverseArray(arrayValue);
+console.log(arrayValue);
+*/
+
+//LIST
+function arrayToList(array) {
+    let list = null;
+    for (let i = array.length - 1; i >= 0; i--) {
+      list = {value: array[i], rest: list};
+    }
+    return list;
+  }
+  
+  function listToArray(list) {
+    let array = [];
+    for (let node = list; node; node = node.rest) {
+      array.push(node.value);
+    }
+    return array;
+  }
+  
+  function prepend(value, list) {
+    return {value, rest: list};
+  }
+  
+  function nth(list, n) {
+    if (!list) return undefined;
+    else if (n == 0) return list.value;
+    else return nth(list.rest, n - 1);
+  }
+  
+  console.log(arrayToList([10, 20]));
+  // → {value: 10, rest: {value: 20, rest: null}}
+  console.log(listToArray(arrayToList([10, 20, 30])));
+  // → [10, 20, 30]
+  console.log(prepend(10, prepend(20, null)));
+  // → {value: 10, rest: {value: 20, rest: null}}
+  console.log(nth(arrayToList([10, 20, 30]), 1));
+  // → 20
